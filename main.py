@@ -19,8 +19,14 @@ def verificandoResposta(interrogatorio):
   resposta = ''
   while resposta != 's' and resposta != 'n':
     resposta = input(f'\n{interrogatorio}').lower()
+    if resposta != 's' and resposta != 'n':
+      mensagem()
   return resposta
-
+  
+def mensagem():
+  print('\nResposta Invalida!!!')
+  print('\nIrei perguntar novamente!!!\n')
+  
 def verificarResultado(resp):
   contador = 0
   for i in range(len(resp)):
